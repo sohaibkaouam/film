@@ -10,7 +10,7 @@ public class Film {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String tconst;
+    private Long tconst;
 
     private String titleType;
 
