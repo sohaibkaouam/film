@@ -22,7 +22,7 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         try {
-            Resource resource = new ClassPathResource("title.basics.tsv");
+            Resource resource = new ClassPathResource("data.tsv");
             BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
 
             reader.readLine();

@@ -1,5 +1,6 @@
 package com.film.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,8 +18,10 @@ public class Film {
     private String tconst;
     private String titleType;
 
+    @Column(length = 500)
     private String primaryTitle;
 
+    @Column(length = 500)
     private String originalTitle;
 
     private String isAdult;
