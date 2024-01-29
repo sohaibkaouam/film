@@ -24,9 +24,9 @@ public class FilmController {
     private final FilmServiceImpl filmService;
 
     @GetMapping("/listFilms")
-    public Page<Film> getAllFilms(@RequestParam(defaultValue = "0") int pageIndex,
-        @RequestParam(defaultValue = "100") int pageSize) {
-        return filmService.getAllFilms(pageIndex,pageSize);
+    public List<Film> getAllFilms(@RequestParam("pageIndex") int pageIndex,
+        @RequestParam("pageSize") int pageSize) {
+        return filmService.getAllFilms(pageIndex,pageSize).getContent();
     }
 
     @PostMapping("/addNewFilm")
